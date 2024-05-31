@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import Main
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', Main.as_view())
 ]
+
+'''
+urlpatterns는 우리의 서버 주소 뒤에 특정 주소를 더해서 어떤 프로그램을 실행시킬지 결정해주는 역할
+
+위를 예시로
+http://127.0.0.1:8000/admin/ 으로 접속하면 admin.site.urls를 실행한다는 의미이다.
+
+우리가 만든 페이지는 html파일로 만들 수 있다
+'''
