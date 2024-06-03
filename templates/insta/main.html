@@ -22,6 +22,28 @@
   height: 480px;
 }
 
+.main_body {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.left_body {
+  background-color: skyblue;
+  margin-right: 100px;
+  width: 500px;
+  height: 2000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right_body {
+  background-color: yellow;
+  width: 300px;
+  height: 1000px;
+  left: 72%;
+  position: fixed;
+}
 </style>
 
 <body>
@@ -43,8 +65,8 @@
 <!-- 상단 내비게이션 바 끝 -->
 
 <!-- 바디 시작-->>
-<div style="display: flex; justify-content: center; padding-top: 50px">
-  <div style="background-color: skyblue; margin-right: 100px; width: 500px; height: 2000px; display: flex; flex-direction: column;">
+<div class="main_body">
+  <div class="left_body">
     <div class="border feed_box">
       컨텐츠1
     </div>
@@ -61,7 +83,7 @@
       컨텐츠5
     </div>
   </div>
-  <div style="background-color: yellow; width: 300px; height: 1000px; left: 72%; position: fixed;">
+  <div class="right_body">
     오른쪽 화면
   </div>
 </div>
