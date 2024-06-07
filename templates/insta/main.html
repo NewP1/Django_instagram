@@ -8,28 +8,23 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
   <!-- 구글 머티리얼 아이콘-->
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
-  <title>여기에 타이틀 </title>
+  <title>인스타 클론 코딩</title>
 </head>
 
 <style>
-.feed_box {
-  background-color: white;
-  width: 480px;
-  margin: 10px;
-  height: 480px;
-}
-
 .main_body {
   display: flex;
   justify-content: center;
   padding-top: 50px;
+  background-color: #FAFAFA;
 }
 
 .left_body {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   margin-right: 100px;
   width: 500px;
   height: 2000px;
@@ -38,11 +33,75 @@
 }
 
 .right_body {
-  background-color: yellow;
+  /* background-color: yellow; */
   width: 300px;
   height: 1000px;
   left: 72%;
   position: fixed;
+}
+
+.feed_box {
+  background-color: white;
+  width: 480px;
+  margin: 10px;
+  min-height: auto;
+  padding-bottom: 10px;
+}
+
+.feed_img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.feed_content {
+  padding: 0px 10px;
+}
+
+.feed_txt {
+  font-size: 14px;
+}
+
+.feed_like {
+  padding: 0px 10px;
+}
+
+.feed_reply {
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feed_icon {
+  padding: 5px 5px 0px 5px;
+  display: flex;
+  justify-content: space-between;
+}span{
+  padding-right: 5px;
+}
+
+.feed_name {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.feed_name_txt {
+  font-size: 14px;
+  padding: 0px 10px;
+  font-weight: bold;
+}
+
+.profile_box {
+  width: 40px;
+  height: 40px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.profile_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
 
@@ -68,19 +127,100 @@
 <div class="main_body">
   <div class="left_body">
     <div class="border feed_box">
-      컨텐츠1
+      <div class="feed_name">
+        <div class="profile_box">
+          <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMDZfNTQg/MDAxNjAxOTU4MzA5NjI1.0a6H-JeRoFC-jcT09f2wH3cmbaIxGGMnxgZolabE05kg.rwfyfxokAlhQc7MSKz1nJ1NiBXXVKukUunvQ33g6z3sg.JPEG.spaostory/%EC%A7%B1%EA%B5%AC_%EB%A9%94%EC%9D%B8.jpg?type=w800">
+        </div>
+        <span class="feed_name_txt">jaehyuk712</span>
+      </div>
+      <img class="feed_img" src="https://cdn.socialimpactnews.net/news/photo/202308/1017_1650_4748.jpg">
+      <div class="feed_icon">
+        <div>
+          <span class="material-icons-outlined">
+            favorite_border
+          </span>
+          <sapn class="material-icons-outlined">
+            mode_comment
+          </sapn>
+          <span class="material-icons-outlined">
+            turned_in_not
+          </span>
+        </div>
+      </div>
+      <div class="feed_like">
+        <p class="feed_txt"><b>좋아요 10개</b></p>
+      </div>
+      <div class="feed_content">
+        <p class="feed_txt"> <b>jaehyuk712</b> 여기 바다사진, 여행가고 싶다, 바다로 가고싶다. 제주도 가고싶다 </p>
+      </div>
+      <div class="feed_reply">
+        <span class="feed_txt"><b>mychew</b> 제주도 가고 싶어요ㅠㅠ</span>
+        <span class="feed_txt"><b>cho</b> 제주도 ㄱ ㄱ</span>
+      </div>
     </div>
     <div class="border feed_box">
-      컨텐츠2
+      <div class="feed_name">
+        <div class="profile_box">
+          <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMDZfNTQg/MDAxNjAxOTU4MzA5NjI1.0a6H-JeRoFC-jcT09f2wH3cmbaIxGGMnxgZolabE05kg.rwfyfxokAlhQc7MSKz1nJ1NiBXXVKukUunvQ33g6z3sg.JPEG.spaostory/%EC%A7%B1%EA%B5%AC_%EB%A9%94%EC%9D%B8.jpg?type=w800">
+        </div>
+        <span class="feed_name_txt">jaehyuk712</span>
+      </div>
+      <img class="feed_img" src="https://cdn.socialimpactnews.net/news/photo/202308/1017_1650_4748.jpg">
+      <div class="feed_icon">
+        <div>
+          <span class="material-icons-outlined">
+            favorite_border
+          </span>
+          <sapn class="material-icons-outlined">
+            mode_comment
+          </sapn>
+          <span class="material-icons-outlined">
+            turned_in_not
+          </span>
+        </div>
+      </div>
+      <div class="feed_like">
+        <p class="feed_txt"><b>좋아요 10개</b></p>
+      </div>
+      <div class="feed_content">
+        <p class="feed_txt"> <b>jaehyuk712</b> 여기 바다사진, 여행가고 싶다, 바다로 가고싶다. 제주도 가고싶다 </p>
+      </div>
+      <div class="feed_reply">
+        <span class="feed_txt"><b>mychew</b> 제주도 가고 싶어요ㅠㅠ</span>
+        <span class="feed_txt"><b>cho</b> 제주도 ㄱ ㄱ</span>
+      </div>
     </div>
     <div class="border feed_box">
-      컨텐츠3
-    </div>
-    <div class="border feed_box">
-      컨텐츠4
-    </div>
-    <div class="border feed_box">
-      컨텐츠5
+      <div class="feed_name">
+        <div class="profile_box">
+          <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMDZfNTQg/MDAxNjAxOTU4MzA5NjI1.0a6H-JeRoFC-jcT09f2wH3cmbaIxGGMnxgZolabE05kg.rwfyfxokAlhQc7MSKz1nJ1NiBXXVKukUunvQ33g6z3sg.JPEG.spaostory/%EC%A7%B1%EA%B5%AC_%EB%A9%94%EC%9D%B8.jpg?type=w800">
+        </div>
+        <span class="feed_name_txt">jaehyuk712</span>
+      </div>
+      <img class="feed_img" src="https://cdn.socialimpactnews.net/news/photo/202308/1017_1650_4748.jpg">
+      <div class="feed_icon">
+        <div>
+          <span class="material-icons-outlined">
+            favorite_border
+          </span>
+          <sapn class="material-icons-outlined">
+            mode_comment
+          </sapn>
+          <span class="material-icons-outlined">
+            turned_in_not
+          </span>
+        </div>
+      </div>
+      <div class="feed_like">
+        <p class="feed_txt"><b>좋아요 10개</b></p>
+      </div>
+      <div class="feed_content">
+        <p class="feed_txt"> <b>jaehyuk712</b> 여기 바다사진, 여행가고 싶다, 바다로 가고싶다. 제주도 가고싶다 </p>
+      </div>
+      <div class="feed_reply">
+        <span class="feed_txt"><b>mychew</b> 제주도 가고 싶어요ㅠㅠ</span>
+        <span class="feed_txt"><b>cho</b> 제주도 ㄱ ㄱ</span>
+      </div>
     </div>
   </div>
   <div class="right_body">
