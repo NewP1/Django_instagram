@@ -155,6 +155,18 @@
 
 <body>
 
+<!-- 여기에 테스트 -->
+
+<!-- {% for feed in feed_list %}
+  <p>{{ feed.id }}</p>
+  <p>{{ feed.image }}</p>
+  <p>{{ feed.content }}</p>
+  <p>{{ feed.profile_image }}</p>
+  <p>{{ feed.user_id }}</p>
+  <p>{{ feed.like_count }}</p>
+{% endfor %} -->
+
+
 <!-- 상단 내비게이션 바 시작 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%; height: 50px; position: fixed;">
   <div class="container">
@@ -174,14 +186,15 @@
 <!-- 바디 시작-->>
 <div class="main_body">
   <div class="left_body">
+    {% for feed in feed_list %}
     <div class="border feed_box">
       <div class="feed_name">
         <div class="profile_box">
-          <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMDZfNTQg/MDAxNjAxOTU4MzA5NjI1.0a6H-JeRoFC-jcT09f2wH3cmbaIxGGMnxgZolabE05kg.rwfyfxokAlhQc7MSKz1nJ1NiBXXVKukUunvQ33g6z3sg.JPEG.spaostory/%EC%A7%B1%EA%B5%AC_%EB%A9%94%EC%9D%B8.jpg?type=w800">
+          <img class="profile_img" src="{{feed.profile_image}}">
         </div>
-        <span class="feed_name_txt">jaehyuk712</span>
+        <span class="feed_name_txt">{{feed.user_id}}</span>
       </div>
-      <img class="feed_img" src="https://cdn.socialimpactnews.net/news/photo/202308/1017_1650_4748.jpg">
+      <img class="feed_img" src="{{feed.image}}">
       <div class="feed_icon">
         <div>
           <span class="material-icons-outlined">
@@ -196,80 +209,17 @@
         </div>
       </div>
       <div class="feed_like">
-        <p class="feed_txt"><b>좋아요 10개</b></p>
+        <p class="feed_txt"><b>좋아요 {{feed.like_count}}개</b></p>
       </div>
       <div class="feed_content">
-        <p class="feed_txt"> <b>jaehyuk712</b> 여기 바다사진, 여행가고 싶다, 바다로 가고싶다. 제주도 가고싶다 </p>
+        <p class="feed_txt"> <b>{{feed.user_id}}</b> {{feed.content}} </p>
       </div>
       <div class="feed_reply">
         <span class="feed_txt"><b>mychew</b> 제주도 가고 싶어요ㅠㅠ</span>
         <span class="feed_txt"><b>cho</b> 제주도 ㄱ ㄱ</span>
       </div>
     </div>
-    <div class="border feed_box">
-      <div class="feed_name">
-        <div class="profile_box">
-          <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMDZfNTQg/MDAxNjAxOTU4MzA5NjI1.0a6H-JeRoFC-jcT09f2wH3cmbaIxGGMnxgZolabE05kg.rwfyfxokAlhQc7MSKz1nJ1NiBXXVKukUunvQ33g6z3sg.JPEG.spaostory/%EC%A7%B1%EA%B5%AC_%EB%A9%94%EC%9D%B8.jpg?type=w800">
-        </div>
-        <span class="feed_name_txt">jaehyuk712</span>
-      </div>
-      <img class="feed_img" src="https://cdn.socialimpactnews.net/news/photo/202308/1017_1650_4748.jpg">
-      <div class="feed_icon">
-        <div>
-          <span class="material-icons-outlined">
-            favorite_border
-          </span>
-          <sapn class="material-icons-outlined">
-            mode_comment
-          </sapn>
-          <span class="material-icons-outlined">
-            turned_in_not
-          </span>
-        </div>
-      </div>
-      <div class="feed_like">
-        <p class="feed_txt"><b>좋아요 10개</b></p>
-      </div>
-      <div class="feed_content">
-        <p class="feed_txt"> <b>jaehyuk712</b> 여기 바다사진, 여행가고 싶다, 바다로 가고싶다. 제주도 가고싶다 </p>
-      </div>
-      <div class="feed_reply">
-        <span class="feed_txt"><b>mychew</b> 제주도 가고 싶어요ㅠㅠ</span>
-        <span class="feed_txt"><b>cho</b> 제주도 ㄱ ㄱ</span>
-      </div>
-    </div>
-    <div class="border feed_box">
-      <div class="feed_name">
-        <div class="profile_box">
-          <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMDZfNTQg/MDAxNjAxOTU4MzA5NjI1.0a6H-JeRoFC-jcT09f2wH3cmbaIxGGMnxgZolabE05kg.rwfyfxokAlhQc7MSKz1nJ1NiBXXVKukUunvQ33g6z3sg.JPEG.spaostory/%EC%A7%B1%EA%B5%AC_%EB%A9%94%EC%9D%B8.jpg?type=w800">
-        </div>
-        <span class="feed_name_txt">jaehyuk712</span>
-      </div>
-      <img class="feed_img" src="https://cdn.socialimpactnews.net/news/photo/202308/1017_1650_4748.jpg">
-      <div class="feed_icon">
-        <div>
-          <span class="material-icons-outlined">
-            favorite_border
-          </span>
-          <sapn class="material-icons-outlined">
-            mode_comment
-          </sapn>
-          <span class="material-icons-outlined">
-            turned_in_not
-          </span>
-        </div>
-      </div>
-      <div class="feed_like">
-        <p class="feed_txt"><b>좋아요 10개</b></p>
-      </div>
-      <div class="feed_content">
-        <p class="feed_txt"> <b>jaehyuk712</b> 여기 바다사진, 여행가고 싶다, 바다로 가고싶다. 제주도 가고싶다 </p>
-      </div>
-      <div class="feed_reply">
-        <span class="feed_txt"><b>mychew</b> 제주도 가고 싶어요ㅠㅠ</span>
-        <span class="feed_txt"><b>cho</b> 제주도 ㄱ ㄱ</span>
-      </div>
-    </div>
+    {% endfor %}
   </div>
   <!-- right body -->
   <div class="right_body">
