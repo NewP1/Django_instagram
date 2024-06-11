@@ -16,12 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import Main
-
-urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('', Main.as_view())
-]
+from .views import Main, UploadFeed
+from django.conf import settings
+from django.conf.urls.static import static
 
 '''
 urlpatterns는 우리의 서버 주소 뒤에 특정 주소를 더해서 어떤 프로그램을 실행시킬지 결정해주는 역할
@@ -31,3 +28,23 @@ http://127.0.0.1:8000/admin/ 으로 접속하면 admin.site.urls를 실행한다
 
 우리가 만든 페이지는 html파일로 만들 수 있다
 '''
+
+urlpatterns = [
+    # path("admin/", admin.site.urls),
+    path('', Main.as_view()),
+    path('content/upload', UploadFeed.as_view())
+]
+
+
+'''
+static은 서버를 돌릴 때 필요한 파일들, media는 사용자가 올리는 파일들을 관리하는 곳
+
+'content/upload'로 접속할 경우 UploadFeed를 실행
+
+아래 코드가 media 경로를 url에 포함하는 코드이다.
+이걸 해줘야 파일을 올리면 ~/media/{파일이름}으로 조회할 수 있다.
+'''
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
