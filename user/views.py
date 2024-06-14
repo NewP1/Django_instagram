@@ -60,3 +60,11 @@ class Join(APIView):
                             name=name)
         
         return Response(status=200, data=dict(message='회원가입 성공했습니다. 로그인 해주세요.'))
+    
+class LogOut(APIView):
+    def get(self, request):
+        return 0
+    
+class UpdateProfile(APIView):
+    def get(self, request):
+        return 0

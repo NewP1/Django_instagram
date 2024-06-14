@@ -15,8 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from .views import Main, UploadFeed
+from django.urls import path, include
+from .views import Main
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -30,9 +30,10 @@ http://127.0.0.1:8000/admin/ 으로 접속하면 admin.site.urls를 실행한다
 '''
 
 urlpatterns = [
-    # path("admin/", admin.site.urls),
+    path("admin/", admin.site.urls),
     path('', Main.as_view()),
-    path('content/upload', UploadFeed.as_view())
+    path('content/', include('content.urls')),
+    path('user/', include('user.urls'))
 ]
 
 
